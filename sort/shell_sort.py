@@ -3,6 +3,7 @@ def shell_sort(list):
     希尔排序
     先将list以步长n分组，对每列数据进行排序，
     再将数据已n/2为步长进行分组并按列排序
+    时间复杂度：O(NlogN)
     :param list:
     :return:
     """
