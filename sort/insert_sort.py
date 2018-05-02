@@ -1,4 +1,5 @@
 from timeit import Timer
+import random
 
 def insert_sort(list):
     """
@@ -64,9 +65,9 @@ def insert_sort2(list):
     return list
 
 if __name__ == '__main__':
-    list = [1,2,1,4,1,5,9,2,6]
+    list = [random.randint(1,10000) for _ in range(10000)]
     print(insert_sort2(list))
-    print(binary_search_test(list, 9))
+    # print(binary_search_test(list, 9))
     t1 = Timer("insert_sort({})".format(list), "from __main__ import insert_sort")
     print("insert_sort ", t1.timeit(number=1000), "milliseconds")
     t2 = Timer("insert_sort2({})".format(list), "from __main__ import insert_sort2")
