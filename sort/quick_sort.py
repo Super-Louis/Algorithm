@@ -18,8 +18,8 @@ def quick_sort(list, left, right):
     """
     if left >= right: # 基线条件（跳出递归）
         return list
-    l = left
-    r = right
+    l = left # 每次循环初始左指针
+    r = right # 每次循环初始右指针
     base = list[l]
     while left < right:
         while list[right] >= base and left < right:

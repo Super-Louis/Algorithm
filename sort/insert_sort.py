@@ -68,8 +68,6 @@ if __name__ == '__main__':
     list = [random.randint(1,10000) for _ in range(10000)]
     print(insert_sort2(list))
     # print(binary_search_test(list, 9))
-    t1 = Timer("insert_sort({})".format(list), "from __main__ import insert_sort")
-    print("insert_sort ", t1.timeit(number=1000), "milliseconds")
     t2 = Timer("insert_sort2({})".format(list), "from __main__ import insert_sort2")
     print("insert_sort2 ", t2.timeit(number=1000), "milliseconds")
 
