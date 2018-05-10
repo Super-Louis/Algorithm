@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Machine_Learning" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../chewbacca" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../scikit-learn" vcs="Git" />
   </component>
 </project>

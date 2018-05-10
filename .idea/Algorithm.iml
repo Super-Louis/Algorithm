@@ -7,5 +7,7 @@
     <orderEntry type="module" module-name="data-system" />
     <orderEntry type="module" module-name="chewbacca" />
     <orderEntry type="module" module-name="ML" />
+    <orderEntry type="module" module-name="scikit-learn" />
+    <orderEntry type="module" module-name="scikit-learn" />
   </component>
 </module>

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/../Machine_Learning/.idea/ML.iml" filepath="$PROJECT_DIR$/../Machine_Learning/.idea/ML.iml" />
       <module fileurl="file://$PROJECT_DIR$/../chewbacca/.idea/chewbacca.iml" filepath="$PROJECT_DIR$/../chewbacca/.idea/chewbacca.iml" />
       <module fileurl="file://$PROJECT_DIR$/../data-system/.idea/data-system.iml" filepath="$PROJECT_DIR$/../data-system/.idea/data-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scikit-learn/.idea/scikit-learn.iml" filepath="$PROJECT_DIR$/../scikit-learn/.idea/scikit-learn.iml" />
     </modules>
   </component>
 </project>
