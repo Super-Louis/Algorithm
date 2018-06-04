@@ -9,5 +9,8 @@
     <orderEntry type="module" module-name="ML" />
     <orderEntry type="module" module-name="scikit-learn" />
     <orderEntry type="module" module-name="scikit-learn" />
+    <orderEntry type="module" module-name="comments_classification" />
+    <orderEntry type="module" module-name="graph" />
+    <orderEntry type="module" module-name="import_service" />
   </component>
 </module>

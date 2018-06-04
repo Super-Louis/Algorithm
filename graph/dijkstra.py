@@ -48,8 +48,19 @@ def find_lowest_cost_node(costs): # 找到cost中最小且未处理的node
             lowest_cost = value
     return Node
 
+def get_shortest_path(end):
+    path = [end]
+    parent = parents[end]
+    path.append(parent)
+    while parent != 'start':
+        parent = parents[parent]
+        path.append(parent)
+    return path[::-1]
+
+
 if __name__ == '__main__':
     dijkstra()
     print(costs)
     print(parents)
     print(processed)
+    print(get_shortest_path('A'))
