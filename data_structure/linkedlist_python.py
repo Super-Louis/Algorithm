@@ -20,7 +20,8 @@ class Node:
 class linkedList():
 
     def __init__(self):
-        self.head = None
+        self.head = None # head初始化
+        self.size = 0
 
     def __repr__(self):
 
@@ -37,18 +38,20 @@ class linkedList():
         return self.head == None
 
     def add(self, item):
+        """在首部添加"""
         current = Node(item)
         current.setNext(self.head)
         self.head = current
+        self.size += 1
 
     def size(self):
 
-        count = 0
-        current = self.head
-        while current:
-            count += 1
-            current = current.getNext()
-        return count
+        # count = 0
+        # current = self.head
+        # while current:
+        #     count += 1
+        #     current = current.getNext()
+        return self.size
 
     def search(self, item):
 
@@ -62,7 +65,14 @@ class linkedList():
         return found
 
     def remove(self, item):
-
+        """
+        删除元素
+        1. 寻找对应的item
+        2. 如果未找到则直接报错
+        3. 有对应的item, 则将该item的previous的next设置为该item的next
+        :param item:
+        :return:
+        """
         current = self.head
         previous = None
         found = False
@@ -82,7 +92,7 @@ class linkedList():
             previous.setNext(current.getNext())
 
     def append(self, item):
-
+        """在尾部添加"""
         previous = None
         current = self.head
         last = Node(item)
@@ -96,7 +106,7 @@ class linkedList():
         last.setNext(None)
 
     def index(self, item):
-
+        """返回item的索引"""
         found = False
         current = self.head
         index = 0
@@ -112,12 +122,16 @@ class linkedList():
             raise ValueError(f"{item} is not in list")
 
     def insert(self, pos, item):
-
+        """
+        在中间插入，过程与删除类似
+        :param pos:
+        :param item:
+        :return:
+        """
         node = Node(item)
         ps = 0
         previous = None
         current = self.head
-
         while ps != pos:
             previous = current
             current = current.getNext()
@@ -130,15 +144,19 @@ class linkedList():
         node.setNext(current)
 
     def pop(self, pos=None):
-
+        """
+        弹出
+        如果没有pos，则弹出尾部元素
+        如果有，则跟insert类似
+        :param pos:
+        :return:
+        """
         if pos == None:
             previous = None
             current = self.head
-
             while current.getNext():
                 previous = current
                 current = current.getNext()
-
             previous.setNext(None)
         else:
             ps = 0
@@ -148,7 +166,6 @@ class linkedList():
                 previous = current
                 current = current.getNext()
                 ps += 1
-
             if not previous:
                 self.head = current.getNext()
             else:
@@ -157,19 +174,13 @@ class linkedList():
         return current.getData()
 
     def reverse(self):
-
-        middle = self.head
-        next = middle.getNext()
-        middle = next
-        next.setNext(middle)
-        while middle:
-            next = middle.getNext()
-            next.setNext(middle)
-            middle = middle.getNext()
-
-
-
-
+        a = linkedList()
+        current = self.head
+        a.add(current.getData())
+        while current.getNext():
+            current = current.getNext()
+            a.add(current.getData())
+        return a
 
 if __name__ == '__main__':
     myLinkedlist = linkedList()
@@ -180,8 +191,8 @@ if __name__ == '__main__':
     myLinkedlist.add('a')
     myLinkedlist.add('b')
     print(myLinkedlist)
-    myLinkedlist.reverse()
-    print(myLinkedlist)
+    reverse_linkedlist = myLinkedlist.reverse()
+    print(reverse_linkedlist)
     # myLinkedlist.remove('b')
     # print(myLinkedlist.isEmpty())
     # print(myLinkedlist.size())
