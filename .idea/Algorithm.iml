@@ -11,6 +11,15 @@
     <orderEntry type="module" module-name="scikit-learn" />
     <orderEntry type="module" module-name="comments_classification" />
     <orderEntry type="module" module-name="graph" />
-    <orderEntry type="module" module-name="import_service" />
+    <orderEntry type="module" module-name="JD-Spider" />
+    <orderEntry type="module" module-name="query_recommend" />
+    <orderEntry type="module" module-name="data-system" />
+    <orderEntry type="module" module-name="data-system" />
+    <orderEntry type="module" module-name="data-system" />
+    <orderEntry type="module" module-name="data-system" />
+    <orderEntry type="module" module-name="daily_import" />
+    <orderEntry type="module" module-name="ListParser" />
+    <orderEntry type="module" module-name="captcha_test" />
+    <orderEntry type="module" module-name="data-system" />
   </component>
 </module>
