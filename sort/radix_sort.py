@@ -16,6 +16,7 @@ def radix_sort(input_list):
                 has_digit = True
             sorted_list[digit].append(input_list[i])
         input_list = new_list(sorted_list) # 得到按照某一位排序后的新列表
+        print(input_list)
         count += 1
     return input_list
 

@@ -1,3 +1,4 @@
+# 加权图最短路径搜索
 # graph
 graph = {}
 graph['start'] = {}
@@ -63,4 +64,4 @@ if __name__ == '__main__':
     print(costs)
     print(parents)
     print(processed)
-    print(get_shortest_path('A'))
+    print(get_shortest_path('end'))

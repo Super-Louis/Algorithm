@@ -31,6 +31,7 @@ def most_common_string(a, b):
                 str_tabel[i][j] = ''
     return max_len, most_common_str
 
+
 def most_common_set(a, b):
     """
     得到两个字符串的最长公共子序列及其长度(不需要连续)
@@ -67,23 +68,27 @@ def max_sum_set(a):
     :param b:
     :return:
     """
-    # todo: 怎么得到子列表？
     max_ending_here = 0
     max_sum = 0
+    max_set = []
+    tmp_max_set = []
     for i in range(len(a)):
         max_ending_here += a[i]
-        if max_ending_here <= 0:
+        tmp_max_set.append(a[i])
+        if max_ending_here <= 0: # 如果小于0，则表示这一段对于最终的最大和无意义
             max_ending_here = 0
+            tmp_max_set = []
         if max_ending_here > max_sum:
             max_sum = max_ending_here
+            max_set = tmp_max_set
 
-    return max_sum
+    return max_sum, max_set
 
 
 if __name__ == '__main__':
     print(most_common_string('abcdef', 'abgdef'))
     print(most_common_set('abcdef', 'abgdef'))
-    print(max_sum_set([1, -2, 3, -1,-1, 2, -1, 3]))
+    print(max_sum_set([3, -1,-1, 2, -1, 3]))
 
 
 

@@ -14,6 +14,7 @@ def merge_sort(list):
     return merge(left, right) # 将左右两边合并
 
 def merge(left, right):
+    """相当于两个有序列表进行合并"""
     l, r = 0, 0 # 左右序列的初始指针
     result = []
     while l < len(left) and r < len(right): # 如果指针小于长度则进行while循环
@@ -21,7 +22,7 @@ def merge(left, right):
             result.append(left[l])
             l += 1
         else:
-            result.append(right[r]) # 如果右边小于左边，则将右边指针对应的元素加入list，并将、右边指针左移
+            result.append(right[r]) # 如果右边小于左边，则将右边指针对应的元素加入list，并将、右边指针右移
             r += 1
     result.extend(left[l:]) # 当任何一边的遍历完之后，将剩余元素加入list
     result.extend(right[r:])
@@ -29,3 +30,11 @@ def merge(left, right):
 
 if __name__ == '__main__':
     print(merge_sort([0,1,0,1,2,1,3,5]))
+    """
+    [0,1,0,1] [2,1,3,5]
+    [0,1] -- [0,1]; [2,1] -- [3,5]
+    [0] [1] merge -- [0] [1] merge; [2] [1] merge -- [3] [5] merge
+    [0,1] merge [0,1]; [1,2] merge [3,5]
+    [0,0,1,1] merge [1,2,3,5]
+    [0,0,1,1,1,2,3,5]  
+    """

@@ -32,7 +32,21 @@ def quick_sort(list, left, right):
     quick_sort(list, right+1, r)
     return list
 
+def quick_sort2(list):
+    if len(list) <= 1: # 基线条件，跳出递归
+        return list
+    base = list[0]
+    lar_b = [i for i in list[1:] if i >= base]
+    low_b = [i for i in list[1:] if i < base]
+    return quick_sort2(low_b) + [base] + quick_sort2(lar_b)
+
+def quick_sort3(list):
+    """todo: 使用堆栈实现快排"""
+    pass
+
 if __name__ == '__main__':
     print(qsort([1,3,2,0,1,1,3,4]))
+    print(quick_sort2([1,3,2,0,1,1,3,4]))
+
 
 
